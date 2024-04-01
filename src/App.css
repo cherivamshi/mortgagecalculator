@@ -98,3 +98,15 @@ button {
 button:hover {
   background-color: darkpurple; /* Change color on hover */
 }
+
+
+.mortgage-calculator {
+  border: 4px double rgba(128, 128, 128, 0.5); /* Double-lined border with grey color */
+  background-color: rgba(128, 128, 128, 0.1); /* Grey background color */
+  border-radius: 40px; /* Optional: Add border radius for rounded corners */
+  padding: 50px; /* Optional: Add padding for inner spacing */
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); /* Optional: Add a soft shadow */
+  border-spacing: 40px; 
+}
+
+/* Rest of your existing styles */

@@ -9,12 +9,10 @@ const MortgageCalculator = () => {
   const [loanAmount, setLoanAmount] = useState(0);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
 
-  const calculateLoanAmount = () => {
+  const handleCalculate = () => {
     const loanAmount = purchasePrice - downPayment;
     setLoanAmount(loanAmount);
-  };
 
-  const calculateMonthlyPayment = () => {
     const monthlyInterestRate = interestRate / 100 / 12;
     const numberOfPayments = repaymentTime * 12;
 
@@ -39,6 +37,9 @@ const MortgageCalculator = () => {
             max="1000000"
             value={purchasePrice}
             onChange={(e) => setPurchasePrice(parseFloat(e.target.value))}
+            style={{
+              background: `linear-gradient(to right, purple ${purchasePrice / 10000}%, #ddd ${purchasePrice / 10000}%)`
+            }}
           />
           <input
             type="number"
@@ -55,6 +56,9 @@ const MortgageCalculator = () => {
             max="100000"
             value={downPayment}
             onChange={(e) => setDownPayment(parseFloat(e.target.value))}
+            style={{
+              background: `linear-gradient(to right, purple ${downPayment / 1000}%, #ddd ${downPayment / 1000}%)`
+            }}
           />
           <input
             type="number"
@@ -71,6 +75,9 @@ const MortgageCalculator = () => {
             max="30"
             value={repaymentTime}
             onChange={(e) => setRepaymentTime(parseFloat(e.target.value))}
+            style={{
+              background: `linear-gradient(to right, purple ${repaymentTime * 3.33}%, #ddd ${repaymentTime * 3.33}%)`
+            }}
           />
           <input
             type="number"
@@ -88,6 +95,9 @@ const MortgageCalculator = () => {
             step="0.1"
             value={interestRate}
             onChange={(e) => setInterestRate(parseFloat(e.target.value))}
+            style={{
+              background: `linear-gradient(to right, purple ${interestRate * 3.33}%, #ddd ${interestRate * 3.33}%)`
+            }}
           />
           <input
             type="number"
@@ -97,7 +107,7 @@ const MortgageCalculator = () => {
           />
         </div>
       </div>
-      <button onClick={() => {calculateLoanAmount(); calculateMonthlyPayment();}}>Calculate</button>
+      <button onClick={handleCalculate}>Calculate</button>
       <div>
         <h3>Loan Amount: ₹{loanAmount}</h3>
         <h3>Monthly Payment: ₹{monthlyPayment}</h3>
