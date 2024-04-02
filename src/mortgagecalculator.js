@@ -4,6 +4,8 @@ import './App.css';
 const MortgageCalculator = () => {
   const [purchasePrice, setPurchasePrice] = useState(0);
   const [DownPayment, setDownPayment] = useState(0);
+  const [RePaymenttime, setRePaymenttime] = useState(0);
+
 
 
   return (
@@ -27,6 +29,18 @@ const MortgageCalculator = () => {
             value={DownPayment}
             onChange={(e) => setDownPayment(parseFloat(e.target.value))}
           />
+           <div className="input-row">
+        <div className="input-container">
+          <label htmlFor="RePaymenttime">RePaymenttime:</label>
+          <input
+            type="number"
+            id="RePaymenttime"
+            value={RePaymenttime}
+            onChange={(e) => setRePaymenttime(parseFloat(e.target.value))}
+            />
+          
+        </div>
+        </div>
         </div>
         </div>
         </div>
