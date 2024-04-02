@@ -93,9 +93,7 @@ const MortgageCalculator = () => {
           <div>LoanAmount: {calculatedLoanAmount()}</div>
             
         </div>
-        <div className="input-row">
-          <div>Estimated per month: {calculatedMonthlyPayment()}</div>
-          </div>
+        
           </div>
     
         
