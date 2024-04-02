@@ -23,8 +23,6 @@ const MortgageCalculator = () => {
           <label htmlFor="DownPayment">DownPayment:</label>
           <input
             type="number"
-            min={0}
-            max={4}
             id="DownPayment"
             value={DownPayment}
             onChange={(e) => setDownPayment(parseFloat(e.target.value))}
