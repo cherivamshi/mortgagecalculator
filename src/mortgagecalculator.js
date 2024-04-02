@@ -5,7 +5,9 @@ const MortgageCalculator = () => {
   const [purchasePrice, setPurchasePrice] = useState(0);
   const [DownPayment, setDownPayment] = useState(0);
   const [RePaymenttime, setRePaymenttime] = useState(0);
+  const [Intrestrate, setIntrestrate] = useState(0);
 
+  
 
 
   return (
@@ -34,6 +36,7 @@ const MortgageCalculator = () => {
           <label htmlFor="RePaymenttime">RePaymenttime</label>
           <input
             type="number"
+            
             id="RePaymenttime"
             value={RePaymenttime} years
             min={1}
@@ -45,6 +48,22 @@ const MortgageCalculator = () => {
       
           <label htmlFor="RePaymenttime"> years</label>
 
+          <div className="input-row">
+        <div className="input-container">
+          <label htmlFor="Intrestrate">Intrestrate:</label>
+          <input
+            type="number"
+            id="Intrestrate"
+            value={Intrestrate}
+           min={0}
+           max={30}
+            onChange={(e) => setIntrestrate(parseFloat(e.target.value))}
+          />
+                    <label htmlFor="Intrestrate"> %</label>
+
+
+        </div>
+        </div>
         </div>
         </div>
         </div>
