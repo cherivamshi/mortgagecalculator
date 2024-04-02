@@ -31,14 +31,20 @@ const MortgageCalculator = () => {
           />
            <div className="input-row">
         <div className="input-container">
-          <label htmlFor="RePaymenttime">RePaymenttime:</label>
+          <label htmlFor="RePaymenttime">RePaymenttime</label>
           <input
             type="number"
             id="RePaymenttime"
-            value={RePaymenttime}
+            value={RePaymenttime} years
+            min={1}
+            max={30}
+
             onChange={(e) => setRePaymenttime(parseFloat(e.target.value))}
+            
             />
-          
+      
+          <label htmlFor="RePaymenttime"> years</label>
+
         </div>
         </div>
         </div>
