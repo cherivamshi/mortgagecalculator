@@ -6,6 +6,11 @@ const MortgageCalculator = () => {
   const [DownPayment, setDownPayment] = useState(0);
   const [RePaymenttime, setRePaymenttime] = useState(0);
   const [Intrestrate, setIntrestrate] = useState(0);
+  const [LoanAmount, setLoanAmount] = useState(0);
+
+  const calculatedLoanAmount = () => {
+    return purchasePrice - DownPayment;
+  };
 
   
 
@@ -22,6 +27,8 @@ const MortgageCalculator = () => {
             value={purchasePrice}
             onChange={(e) => setPurchasePrice(parseFloat(e.target.value))}
           />
+          </div>
+          </div>
            <div className="input-row">
         <div className="input-container">
           <label htmlFor="DownPayment">DownPayment:</label>
@@ -31,6 +38,8 @@ const MortgageCalculator = () => {
             value={DownPayment}
             onChange={(e) => setDownPayment(parseFloat(e.target.value))}
           />
+          </div>
+          </div>
            <div className="input-row">
         <div className="input-container">
           <label htmlFor="RePaymenttime">RePaymenttime</label>
@@ -45,8 +54,11 @@ const MortgageCalculator = () => {
             onChange={(e) => setRePaymenttime(parseFloat(e.target.value))}
             
             />
-      
+           
           <label htmlFor="RePaymenttime"> years</label>
+          </div>
+            </div>
+      
 
           <div className="input-row">
         <div className="input-container">
@@ -59,18 +71,17 @@ const MortgageCalculator = () => {
            max={30}
             onChange={(e) => setIntrestrate(parseFloat(e.target.value))}
           />
-                    <label htmlFor="Intrestrate"> %</label>
+          <label htmlFor="Intrestrate"> %</label>
+          </div>
+          </div>
 
-
+          <div className="input-row">
+          <div>LoanAmount: {calculatedLoanAmount()}</div>
+            
         </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
+      
+    
         
   
   );
