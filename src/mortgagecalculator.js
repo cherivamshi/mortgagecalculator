@@ -6,7 +6,7 @@ const MortgageCalculator = () => {
   const [DownPayment, setDownPayment] = useState(0);
   const [RePaymenttime, setRePaymenttime] = useState(0);
   const [Intrestrate, setIntrestrate] = useState(0);
-  const [LoanAmount] = useState(0);
+  const [LoanAmount,setLoanAmount] = useState(0);
   const [MonthlyPayment,SetMonthlyPayment]= useState(0);
 
 
@@ -19,7 +19,7 @@ const MortgageCalculator = () => {
     const n = RePaymenttime * 12;
     const numerator = r * (1 + r) ** n;
     const denominator = ((1 + r) ** n) - 1;
-    const mortgagePayment = LoanAmount * (numerator / denominator);
+    const mortgagePayment = calculatedLoanAmount  () * (numerator / denominator);
     SetMonthlyPayment(mortgagePayment || 0);
     
   };
@@ -93,8 +93,14 @@ const MortgageCalculator = () => {
           <div>LoanAmount: {calculatedLoanAmount()}</div>
             
         </div>
+        <div className="input-row">
+        <div>Estimated Monthly Payment: {MonthlyPayment}</div>
+      </div>
+      <button onClick={calculatedMonthlyPayment}>Calculate</button>
+    </div>
+
         
-          </div>
+          
     
         
   
