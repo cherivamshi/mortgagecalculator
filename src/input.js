@@ -1,6 +1,6 @@
 import React from "react";
 
-const input  = ({type,id,value,min,max,onChange}) => {
+const Input  = ({type,id,value,min,max,onChange}) => {
     return(
         <input
         type={type}
@@ -8,8 +8,8 @@ const input  = ({type,id,value,min,max,onChange}) => {
         value={value}
        min={min}
        max={max}
-        onChange={(e) => onchange(parseFloat(e.target.value))}
+        onChange={(e) => onChange(parseFloat(e.target.value))}
     />
     );
 };
-export default input;
+export default Input;

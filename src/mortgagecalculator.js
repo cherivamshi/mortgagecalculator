@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import input from './input';
+import Input from './Input';
 
 
 const MortgageCalculator = () => {
@@ -33,7 +33,7 @@ const MortgageCalculator = () => {
       <div className="input-row">
         <div className="input-container">
           <label htmlFor="purchase-price">Purchase Price</label>
-          <input
+          <Input
           type="number"
           id="purchase-price"
           value={purchasePrice}
@@ -47,27 +47,32 @@ const MortgageCalculator = () => {
           </div>
            <div className="input-row">
         <div className="input-container">
-          <label htmlFor="DownPayment">DownPayment:</label>
-          <input
-            type="number"
-            id="DownPayment"
-            value={DownPayment}
-            onChange={(e) => setDownPayment(parseFloat(e.target.value))}
+          <label htmlFor="DownPayment">DownPayment</label>
+          <Input
+          type="number"
+          id="DownPayment"
+          value={DownPayment}
+          onChange={setDownPayment}
+            //type="number"
+            //id="DownPayment"
+            //value={DownPayment}
+            //onChange={(e) => setDownPayment(parseFloat(e.target.value))}
           />
           </div>
           </div>
            <div className="input-row">
         <div className="input-container">
           <label htmlFor="RePaymenttime">RePaymenttime</label>
-          <input
+          <Input
+
             type="number"
 
             id="RePaymenttime"
             value={RePaymenttime} years
             min={1}
             max={30}
-
-            onChange={(e) => setRePaymenttime(parseFloat(e.target.value))}
+           onChange={setRePaymenttime}
+            //onChange={(e) => setRePaymenttime(parseFloat(e.target.value))}
             
             />
            
@@ -79,13 +84,14 @@ const MortgageCalculator = () => {
           <div className="input-row">
         <div className="input-container">
           <label htmlFor="Intrestrate">Intrestrate:</label>
-          <input
+          <Input
             type="number"
             id="xyz"
             value={Intrestrate}
            min={0}
            max={30}
-            onChange={(e) => setIntrestrate(parseFloat(e.target.value))}
+           onChange={setIntrestrate}
+            //onChange={(e) => setIntrestrate(parseFloat(e.target.value))}
           />
           <label htmlFor="Intrestrate"> %</label>
           </div>
