@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
+
 const MortgageCalculator = () => {
   const [purchasePrice, setPurchasePrice] = useState(0);
   const [DownPayment, setDownPayment] = useState(0);
@@ -23,10 +24,6 @@ const MortgageCalculator = () => {
     SetMonthlyPayment(mortgagePayment || 0);
     
   };
-
-
-
-  
 
 
   return (
