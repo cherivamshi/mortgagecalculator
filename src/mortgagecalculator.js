@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import input from './input';
 
 
 const MortgageCalculator = () => {
@@ -31,12 +32,16 @@ const MortgageCalculator = () => {
       <h2>Mortgage Calculator</h2>
       <div className="input-row">
         <div className="input-container">
-          <label htmlFor="purchase-price">Purchase Price:</label>
+          <label htmlFor="purchase-price">Purchase Price</label>
           <input
-            type="number"
-            id="purchase-price"
-            value={purchasePrice}
-            onChange={(e) => setPurchasePrice(parseFloat(e.target.value))}
+          type="number"
+          id="purchase-price"
+          value={purchasePrice}
+          onChange={setPurchasePrice}
+           // type="number"
+           // id="purchase-price"
+           // value={purchasePrice}
+           // onChange={(e) => setPurchasePrice(parseFloat(e.target.value))}
           />
           </div>
           </div>
@@ -56,7 +61,7 @@ const MortgageCalculator = () => {
           <label htmlFor="RePaymenttime">RePaymenttime</label>
           <input
             type="number"
-            
+
             id="RePaymenttime"
             value={RePaymenttime} years
             min={1}
@@ -76,7 +81,7 @@ const MortgageCalculator = () => {
           <label htmlFor="Intrestrate">Intrestrate:</label>
           <input
             type="number"
-            id="Intrestrate"
+            id="xyz"
             value={Intrestrate}
            min={0}
            max={30}
