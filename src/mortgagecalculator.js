@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Input from './Input';
+import Label from './Label';
 
 
 const MortgageCalculator = () => {
@@ -32,7 +33,10 @@ const MortgageCalculator = () => {
       <h2>Mortgage Calculator</h2>
       <div className="input-row">
         <div className="input-container">
-          <label htmlFor="purchase-price">Purchase Price</label>
+         <Label
+         htmlFor={purchasePrice}
+         name="purchasePrice"
+         />
           <Input
           type="number"
           id="purchase-price"
@@ -47,7 +51,10 @@ const MortgageCalculator = () => {
           </div>
            <div className="input-row">
         <div className="input-container">
-          <label htmlFor="DownPayment">DownPayment</label>
+        <Label
+         htmlFor={DownPayment}
+         name="DownPayment"
+         />         
           <Input
           type="number"
           id="DownPayment"
@@ -62,11 +69,12 @@ const MortgageCalculator = () => {
           </div>
            <div className="input-row">
         <div className="input-container">
-          <label htmlFor="RePaymenttime">RePaymenttime</label>
-          <Input
-
+        <Label
+         htmlFor={RePaymenttime}
+         name="RePaymenttime"
+         />            
+           <Input
             type="number"
-
             id="RePaymenttime"
             value={RePaymenttime} years
             min={1}
@@ -76,15 +84,20 @@ const MortgageCalculator = () => {
             
             />
            
-          <label htmlFor="RePaymenttime"> years</label>
+           <Label
+         htmlFor={RePaymenttime}
+         name="Years"
+         />             
           </div>
             </div>
       
 
           <div className="input-row">
         <div className="input-container">
-          <label htmlFor="Intrestrate">Intrestrate:</label>
-          <Input
+        <Label
+         htmlFor={Intrestrate}
+         name="Intrest rate"
+         />              <Input
             type="number"
             id="xyz"
             value={Intrestrate}
@@ -93,8 +106,11 @@ const MortgageCalculator = () => {
            onChange={setIntrestrate}
             //onChange={(e) => setIntrestrate(parseFloat(e.target.value))}
           />
-          <label htmlFor="Intrestrate"> %</label>
-          </div>
+<Label
+         htmlFor={Intrestrate}
+         name="%"
+         />          
+             </div>
           </div>
 
           <div className="input-row">
